@@ -14,7 +14,7 @@ export default function Header() {
                     <Link to={"/nossoServico"}>Nosso Serviço</Link>
                     <Link to={"/sobre"}>Sobre</Link>
                     <Link to={"/contato"}>Contato</Link>
-                    <Link to={"/login"}>Login</Link>
+                    <Link to={"/conta"}>Conta</Link>
                 </div>
             </div>
         </header>

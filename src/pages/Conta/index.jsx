@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-// import Header from "../../components/Header";
+import Header from "../../components/Header";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import "./style.css";
@@ -23,7 +23,7 @@ export default function Conta() {
   const addPost = (data) => console.log(data);
   return (
     <div>
-      {/* <Header /> */}
+      <Header />
 
       <main>
         <div className="card-post">
