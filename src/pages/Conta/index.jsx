@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import Header from "../../components/Header";
+// import Header from "../../components/Header";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import "./style.css";
@@ -14,7 +14,7 @@ const validationPost = yup.object().shape({
   numero: yup.string().required("Preencha o numero da casa").max(5, "Até 5 caract.")
 });
 
-export default function Posts() {
+export default function Conta() {
   const {
     register,
     handleSubmit,
@@ -23,7 +23,7 @@ export default function Posts() {
   const addPost = (data) => console.log(data);
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
 
       <main>
 

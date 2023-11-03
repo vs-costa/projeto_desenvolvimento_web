@@ -5,11 +5,13 @@ import Veiculos from '../pages/Veiculos'
 
 function AppRouter() {
   return (
-    <Routes>
-        <Route path='/' element={<Home/>}> </Route>
-        <Route path='/veiculos' element={<Veiculos/>}> </Route>
-        <Route path='/conta' element={<Conta/>}> </Route>
-    </Routes>
+    <div>
+      <Routes>
+        <Route path='/' element={<Home />}> </Route>
+        <Route path='/veiculos' element={<Veiculos />}> </Route>
+        <Route path='/conta' element={<Conta />}> </Route>
+      </Routes>
+    </div>
   )
 }
 export default AppRouter
