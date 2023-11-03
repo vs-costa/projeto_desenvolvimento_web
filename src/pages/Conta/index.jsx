@@ -26,7 +26,97 @@ export default function Conta() {
       {/* <Header /> */}
 
       <main>
+        <div className="card-post">
+          <h1>Cadastro</h1>
+          <hr />
+          <div className="card-body-post">
+            <form action="#" onSubmit={handleSubmit(addPost)}>
 
+              <div className="fields">
+                <label htmlFor="nome  ">Nome</label>
+                <input
+                  type="text"
+                  id="nome "
+                  name="nome"
+                  {...register("nome")}
+                />
+                <p className="error-message">{errors.nome?.message}</p>
+              </div>
+
+              <div className="fields">
+                <label htmlFor="email">Email</label>
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  {...register("email")}
+                />
+                <p className="error-message">{errors.email?.message}</p>
+              </div>
+
+              <div className="fields">
+                <label htmlFor="senha">Senha</label>
+                <input
+                  type="text"
+                  id="senha"
+                  name="senha"
+                  {...register("senha")}
+                />
+                <p className="error-message">{errors.senha?.message}</p>
+              </div>
+
+              <div className="fields">
+                <label htmlFor="cpf">CPF</label>
+                <input
+                  type="text"
+                  id="cpf"
+                  name="cpf"
+                  {...register("cpf")}
+                />
+                <p className="error-message">{errors.cpf?.message}</p>
+              </div>
+
+              <div className="fields">
+                <label htmlFor="cep">CEP</label>
+                <input
+                  type="text"
+                  id="cep"
+                  name="cep"
+                  {...register("cep")}
+                />
+                <p className="error-message">{errors.cep?.message}</p>
+              </div>
+
+              <div className="fields">
+                <label htmlFor="complemento">Complemento</label>
+                <input
+                  type="text"
+                  id="complemento"
+                  name="complemento"
+                  {...register("complemento")}
+                />
+                <p className="error-message">{errors.complemento?.message}</p>
+              </div>
+
+              <div className="fields">
+                <label htmlFor="numero">Número</label>
+                <input
+                  type="text"
+                  id="numero"
+                  name="numero"
+                  {...register("numero")}
+                />
+                <p className="error-message">{errors.numero?.message}</p>
+              </div>
+
+
+              <div className="btn-post">
+                <button>Cadastrar</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
       </main>
     </div>
   );
