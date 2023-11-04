@@ -9,7 +9,6 @@ export default function Veiculos() {
 
   useEffect(() => {
     axios
-      // mudar esse link abaixo, está errado pq improvisei
       .get('http://localhost:8080/api/carro/listar')
       .then((response) => {
         setCarro(response.data);
