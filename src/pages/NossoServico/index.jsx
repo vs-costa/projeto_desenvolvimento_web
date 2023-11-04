@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Header from "../../components/Header";
+import "./style.css"
 
 export default function NossoServico() {
   return (
-    <div>
+    <div >
       <Header />
-      <div>
+      <div className="container"  >
         <h2>Nosso Servico</h2>
 
         <p>
@@ -23,11 +24,14 @@ export default function NossoServico() {
         </p>
       </div>
 
-      <div>
-        <h2>Perguntas Frequentes</h2>
+       
+      <div >
+        <h2 >Perguntas Frequentes</h2>
+       
 
-        <ul class="perguntas-respostas">
+        <ul>
           <li>
+            
             <h3>Quais são os documentos necessários para alugar um veículo?</h3>
             <h1 />
             RESPOSTA: Você precisará apresentar sua carteira de motorista
