@@ -10,7 +10,7 @@ export default function NossoServico() {
       <div className="container"  >
         <h2>Nosso Servico</h2>
 
-        <p>
+        <p className="nosso">
           Seja para uma viagem de negócios ou uma escapadela de fim de semana, a
           nossa locadora de veículos está aqui para tornar a sua jornada mais
           conveniente e confortável. Com uma ampla variedade de opções, desde
@@ -25,7 +25,7 @@ export default function NossoServico() {
       </div>
 
        
-      <div >
+      <div className="pergunta">
         <h2 >Perguntas Frequentes</h2>
        
 

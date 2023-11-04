@@ -31,6 +31,36 @@ body {
 
 
 
+.pergunta{
+
+  margin-left: 20px;
+  margin-right: 20PX;
+  text-decoration: none;
+
+}
+
+.pergunta ul {
+list-style: none;
+
+}
+
+.pergunta h2 {
+  margin-bottom: 30px;
+  margin-top: 60px;
+  text-align: center;
+  
+  }
+
+  .nosso {
+
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 44px;
+  }
+
+
+
 
 
 
