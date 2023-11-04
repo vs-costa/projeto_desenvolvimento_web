@@ -1,0 +1,91 @@
+
+
+.card-post {
+    background-color: #3B3C9A;
+    padding: 30px 70px;
+    border-radius: 50px;
+}
+
+.card-post h1{
+    font-family: Heebo;
+    font-weight: 400;
+    text-align: center;
+
+    color: #FEDD29;
+
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+.line-post {
+    height: 2px;
+    background-color: #FEDD29;
+}
+
+.card-body-post {
+    margin-top: 25px;
+
+}
+
+.fields {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 1.2rem;
+
+    color: #FEDD29;
+
+    font-family: Poppins;
+}
+
+input, textarea {
+    width: 100%;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+
+    font-size: 1.2rem;
+
+    padding-left: 15px;
+}
+
+input {
+    height: 45px;
+}
+
+textarea {
+    height: 190px;
+    resize: none;
+
+    padding-top: 10px;
+}
+
+.btn-post{
+    margin-top: 30px;
+    text-align: center;
+
+}
+
+.btn-post button{
+    font-family: Heebo;
+    font-weight: 800;
+    font-size: 1.3rem;
+
+    padding: 5px 50px;
+    color: #FEDD29;
+    background-color: #9A9AC8;
+
+    border: 0;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+}
+
+.error-message {
+    color: rgb(240, 47, 47);
+}
+

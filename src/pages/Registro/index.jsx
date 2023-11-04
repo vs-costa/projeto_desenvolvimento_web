@@ -3,6 +3,7 @@ import Header from "../../components/Header";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import "./style.css";
+import '../../styles/style.css';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -36,9 +37,9 @@ export default function Registro() {
     })
 
   return (
-    <div>
+    <div className="registro">
       <Header />
-      <main>
+      <main className="registro-body">
         <div className="card-post">
           <h1>Cadastro</h1>
           <hr />

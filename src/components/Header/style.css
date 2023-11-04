@@ -1,0 +1,15 @@
+header{
+    padding: 10px;
+    align-items: center;
+    background-color: #3B3C9A;
+}
+
+header a{
+
+    color: #FEDD29;
+    text-decoration: none;
+}
+
+header a+a{
+    margin-left: 8px;
+    }
