@@ -1,8 +1,10 @@
 import React from 'react'
+import Header from '../../components/Header'
 
 export default function Sobre() {
     return (
       <div>
+        <Header />
         <h2>Sobre</h2>  
         <p>Nossa jornada começou com uma paixão por conectar pessoas com aventuras emocionantes. Desde o nossoinício, buscamos transformar viagens comuns em experiências extraordinárias, tornando o aluguel de carros umaexperiência fácil, acessível e cheia de possibilidades.
         Fundada por entusiastas de viagens que entendem a importância de cada quilômetro percorrido, a AutoVoyage, temuma história de dedicação e inovação. Nossa missão é simples: capacitar você a explorar o mundo com liberdade,conforto e confiança.

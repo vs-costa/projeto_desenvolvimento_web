@@ -1,9 +1,12 @@
 import React from 'react'
 import './style.css'
+import Header from '../../components/Header'
 
 export default function Veiculos() {
   return (
+    
     <div className='veiculos'>
+      <Header />
       <div className='container'>
         <div className='titulo'>
           <h1>Conheça nossos veículos para locação.</h1>
