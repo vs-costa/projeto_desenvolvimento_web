@@ -31,11 +31,11 @@ export default function Login() {
 
 
     return (
-        <div>
+        <div className="login">
             <Header />
-            <main>
+            <main className="login-body">
                 <div className="card-post">
-                    <h1>Cadastro</h1>
+                    <h1>Login</h1>
                     <hr />
                     <div className="card-body-post">
                         <form action="#" onSubmit={handleSubmit(addPost)}>
