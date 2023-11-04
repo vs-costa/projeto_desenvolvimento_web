@@ -1,4 +1,18 @@
+.login {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(45deg,
+            #fff 0%,
+            #3DECB1 100%)
+}
 
+.login-body {
+    display: flex;
+    justify-content: center;
+
+
+    padding: 3rem 0;
+}
 
 .card-post {
     background-color: #3B3C9A;
@@ -6,7 +20,7 @@
     border-radius: 50px;
 }
 
-.card-post h1{
+.card-post h1 {
     font-family: Heebo;
     font-weight: 400;
     text-align: center;
@@ -41,7 +55,8 @@ label {
     font-family: Poppins;
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%;
     border-radius: 10px;
     border: 0;
@@ -63,13 +78,13 @@ textarea {
     padding-top: 10px;
 }
 
-.btn-post{
+.btn-post {
     margin-top: 30px;
     text-align: center;
 
 }
 
-.btn-post button{
+.btn-post button {
     font-family: Heebo;
     font-weight: 800;
     font-size: 1.3rem;
@@ -88,4 +103,3 @@ textarea {
 .error-message {
     color: rgb(240, 47, 47);
 }
-
