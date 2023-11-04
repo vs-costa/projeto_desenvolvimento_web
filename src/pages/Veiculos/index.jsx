@@ -36,8 +36,8 @@ export default function Veiculos() {
               {carros.map((carro, key) => {
                 return (
                   <div className='card' key={key}>
-                    <h4>{carro.nome}</h4>
-                    <img src={carro.img} alt="" />
+                    <h3>{carro.nome}</h3>
+                    <img src={carro.img} alt={carro.nome} />
                     <p>{carro.descricao}</p>
                     <h4>Valor da diária:</h4>
                     <h5>{carro.valor}</h5>

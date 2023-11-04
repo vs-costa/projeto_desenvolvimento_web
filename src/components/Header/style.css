@@ -1,15 +1,43 @@
-header{
-    padding: 10px;
-    align-items: center;
+.header-content {
+    
+   
     background-color: #3B3C9A;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px 20px;
 }
 
-header a{
+.container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 10vh;
+   
+}
 
-    color: #FEDD29;
+.logo{
+    padding-left: 10px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+
+}
+
+.menu{
+    display: flex;
+}
+
+.menu a {
     text-decoration: none;
+    font-weight: bold;
+    color: #FEDD29;
+    transition: color 0.3s ease;
+    margin-right: 10px;
+    font-size: 12px;
 }
 
-header a+a{
-    margin-left: 8px;
-    }
+.menu a:hover {
+    color: orange;
+}
+
+
