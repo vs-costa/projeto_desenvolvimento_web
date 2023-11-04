@@ -3,6 +3,9 @@ import Header from "../../components/Header";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import "./style.css";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 
 const validationPost = yup.object().shape({
   nome: yup.string().required("Preencha seu nome").max(100, "Até 100 caract."),
@@ -14,17 +17,27 @@ const validationPost = yup.object().shape({
   numero: yup.string().required("Preencha o numero da casa").max(5, "Até 5 caract.")
 });
 
-export default function Conta() {
+export default function Registro() {
+
+  let navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
     formState: { errors } } = useForm({ resolver: yupResolver(validationPost) });
 
-  const addPost = (data) => console.log(data);
+  const addPost = (data) => axios.post("http://localhost:8080/api/pessoa/registro", data)
+    .then(() => {
+      console.log("deu certo");
+      navigate("/");
+    })
+    .catch(() => {
+      console.log("deu errado");
+    })
+
   return (
     <div>
       <Header />
-
       <main>
         <div className="card-post">
           <h1>Cadastro</h1>
@@ -55,12 +68,12 @@ export default function Conta() {
               </div>
 
               <div className="fields">
-                <label htmlFor="senha">Senha</label>
+                <label htmlFor="password">Senha</label>
                 <input
                   type="text"
-                  id="senha"
-                  name="senha"
-                  {...register("senha")}
+                  id="password"
+                  name="password"
+                  {...register("password")}
                 />
                 <p className="error-message">{errors.senha?.message}</p>
               </div>
