@@ -1,8 +1,70 @@
 
-
-
-.perguntas-respostas {
-  padding-bottom: 0%;
+*{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 22px;
 }
+
+body {
+  height: 100vh;
+  background: linear-gradient(45deg,#fff 0%, #3DECB1 100%)
+}
+
+.container {
+  margin-left: 10;
+  padding: 30px; 
+  border-radius: 12px;  
+  width: 80%;
+  min-height: 400px;
+  background-color: #2f3644;
+}
+
+.container h2 {
+  color: #fff;
+  margin-left: 20px;
+}
+
+.container p {
+  color: #fff;
+  text-align: justify;
+}
+
+
+
+
+.pergunta{
+
+  margin-left: 20px;
+  margin-right: 20PX;
+  text-decoration: none;
+
+}
+
+.pergunta ul {
+list-style: none;
+
+}
+
+.pergunta h2 {
+  margin-bottom: 30px;
+  margin-top: 60px;
+  text-align: center;
+  
+  }
+
+  .nosso {
+
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 44px;
+  }
+
+
+
+
+
+
+
+
 
 

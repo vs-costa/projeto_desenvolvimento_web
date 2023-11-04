@@ -1,15 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Header from "../../components/Header";
+import "./style.css"
 
 export default function NossoServico() {
   return (
-    <div>
+    <div >
       <Header />
-      <div>
+      <div className="container"  >
         <h2>Nosso Servico</h2>
 
-        <p>
+        <p className="nosso">
           Seja para uma viagem de negócios ou uma escapadela de fim de semana, a
           nossa locadora de veículos está aqui para tornar a sua jornada mais
           conveniente e confortável. Com uma ampla variedade de opções, desde
@@ -23,11 +24,14 @@ export default function NossoServico() {
         </p>
       </div>
 
-      <div>
-        <h2>Perguntas Frequentes</h2>
+       
+      <div className="pergunta">
+        <h2 >Perguntas Frequentes</h2>
+       
 
-        <ul class="perguntas-respostas">
+        <ul>
           <li>
+            
             <h3>Quais são os documentos necessários para alugar um veículo?</h3>
             <h1 />
             RESPOSTA: Você precisará apresentar sua carteira de motorista
