@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 const validationPost = yup.object().shape({
   nome: yup.string().required("Preencha seu nome").max(100, "Até 100 caract."),
   email: yup.string().required("Preencha seu email").max(100, "Até 100 caract."),
-  senha: yup.string().required("Preencha sua senha").max(20, "Até 20 caract."),
+  password: yup.string().required("Preencha sua senha").max(20, "Até 20 caract."),
   cpf: yup.string().required("Preencha seu CPF").max(11, "Até 11 caract."),
   cep: yup.string().required("Preencha seu CEP(só numeros)").max(8, "Até 8 caract."),
   complemento: yup.string().required("Preencha o complemento").max(100, "Até 100 caract."),
