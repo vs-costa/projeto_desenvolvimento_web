@@ -7,7 +7,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const validationPost = yup.object().shape({
-    nome: yup.string().required("Preencha seu nome").max(100, "Até 100 caract."),
+    email: yup.string().required("Preencha seu email").max(100, "Até 100 caract."),
     senha: yup.string().required("Preencha sua senha").max(20, "Até 20 caract."),
 });
 
@@ -20,7 +20,16 @@ export default function Login() {
         handleSubmit,
         formState: { errors } } = useForm({ resolver: yupResolver(validationPost) });
 
-    const addPost = (data) => axios.post("http://localhost:8080/api/pessoa/login", data)
+        const addPost = (data) => axios.post("http://localhost:8080/api/pessoa/login", data)
+        .then(() => {
+            console.log("deu certo");
+            navigate("/");
+        })
+        .catch(() => {
+            console.log("deu errado");
+        })
+
+        const deletePessoa = () => axios.delete("http://localhost:8080/api/pessoa/deletarLogico")
         .then(() => {
             console.log("deu certo");
             navigate("/");
@@ -41,14 +50,50 @@ export default function Login() {
                         <form action="#" onSubmit={handleSubmit(addPost)}>
 
                             <div className="fields">
-                                <label htmlFor="nome  ">Nome</label>
+                                <label htmlFor="nome  ">email</label>
                                 <input
                                     type="text"
-                                    id="nome "
-                                    name="nome"
-                                    {...register("nome")}
+                                    id="email "
+                                    name="email"
+                                    {...register("email")}
                                 />
-                                <p className="error-message">{errors.nome?.message}</p>
+                                <p className="error-message">{errors.email?.message}</p>
+                            </div>
+
+                            <div className="fields">
+                                <label htmlFor="password">Senha</label>
+                                <input
+                                    type="text"
+                                    id="password"
+                                    name="password"
+                                    {...register("password")}
+                                />
+                                <p className="error-message">{errors.senha?.message}</p>
+                            </div>
+
+                            <div className="btn-post">
+                                <button>Logar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+                <div className="card-post">
+                    <h1>Deletar conta</h1>
+                    <hr />
+                    <div className="card-body-post">
+                        <form action="#" onSubmit={handleSubmit(deletePessoa)}>
+
+                            <div className="fields">
+                                <label htmlFor="nome  ">email</label>
+                                <input
+                                    type="text"
+                                    id="email "
+                                    name="email"
+                                    {...register("email")}
+                                />
+                                <p className="error-message">{errors.email?.message}</p>
                             </div>
 
                             <div className="fields">
