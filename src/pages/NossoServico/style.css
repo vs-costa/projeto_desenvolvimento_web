@@ -1,8 +1,20 @@
 
+.juntar {
+  text-align: center;
+  margin-top: 20px;
 
+}
+
+.cont{
+
+  text-align: center;
+  margin-top: 20px;
+  
+
+}
 
 .container {
-  margin-left: 10;
+  margin: 0 auto;
   padding: 30px; 
   border-radius: 12px;  
   width: 80%;
