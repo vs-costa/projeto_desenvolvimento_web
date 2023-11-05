@@ -6,8 +6,10 @@ import "./style.css"
 export default function NossoServico() {
   return (
     
-    <div >
-      <Header />
+      
+    
+    <div>
+      <Header/>
       
         
       
@@ -92,5 +94,6 @@ export default function NossoServico() {
         </ul>
       </div>
     </div>
+    
   );
 }

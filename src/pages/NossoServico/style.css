@@ -1,6 +1,11 @@
 
 
 
+.header {
+    height: 100vh;
+    background: linear-gradient(45deg,#fff 0%, #3DECB1 100%)
+}
+
 .servico-container {
   margin: 30px auto;
   padding: 30px; 
@@ -20,12 +25,14 @@
   text-decoration: none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   
+  
 
 }
 
 .pergunta ul {
 list-style: none;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
+margin-bottom: 40px;
 
 
 }
