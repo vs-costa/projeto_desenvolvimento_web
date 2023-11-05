@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 import "./style.css"
 
 export default function Sobre() {
@@ -14,6 +15,7 @@ export default function Sobre() {
           Nossa equipe comprometida está sempre pronta para ajudá-lo a escolher o veículo perfeito para sua próximajornada. Trabalhamos incansavelmente para garantir que sua experiência de aluguel de carros seja tranquila esem complicações, para que você possa se concentrar no que mais importa: a alegria de viajar.
           Bem-vindo à AutoVoyage, onde cada estrada é uma promessa de novas experiências!</p>  
           </div>
+          <Footer/>
         </div>
     )
   }
