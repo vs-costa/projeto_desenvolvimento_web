@@ -2,12 +2,15 @@ import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import Header from "../../components/Header";
 import './style.css';
-import AluguelVeiculo from '../../components/AluguelVeiculo'
+import AluguelVeiculo from '../../components/AluguelVeiculo';
+import Footer from "../../components/Footer";
 
 export default function Veiculos() {
   const [carros, setCarros] = useState([]);
   const [carroSelecionado, setCarroSelecionado] = useState(null);
-  const aluguelRef = useRef(null); // Criar uma referência para a div de aluguel
+  const aluguelRef = useRef(null);
+
+
 
   useEffect(() => {
     axios
@@ -21,9 +24,12 @@ export default function Veiculos() {
   }, []);
 
   const handleCarroSelect = (carro) => {
-    setCarroSelecionado(carro);
-    // Rolar para a div de aluguel quando o carro é selecionado
-    aluguelRef.current.scrollIntoView({ behavior: 'smooth' });
+    if (carro.ativo) {
+      setCarroSelecionado(carro);
+      aluguelRef.current.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      alert('Este carro não está disponível para aluguel no momento.');
+    }
   };
 
   return (
@@ -51,19 +57,24 @@ export default function Veiculos() {
                     <div className='card-conteudo'>
                       <p>{carro.descricao}</p>
                       <h4>Valor da diária:</h4>
-                      <h5>{carro.valor.toFixed(2)},00</h5>
-                      <button className='botao' onClick={() => handleCarroSelect(carro)}>RESERVE AGORA</button>
+                      <h5>{carro.valor.toFixed(2)}</h5>
+                      {/* função ternária: condição: o carro está ativo? {carro.ativo ?}. Se sim, ocorre o primeiro parenteses, se Não :, aparece a mensagem */}
+                      {carro.ativo ?
+                       (<button className='botao' onClick={() => handleCarroSelect(carro)}>RESERVE AGORA</button>)
+                       :
+                       (<p>Carro indisponível para locação</p>
+                      )}
                     </div>
                   </div>
-                )
+                );
               })}
             </div>
-
             <div ref={aluguelRef} className='aluguel-veiculo'></div>
             {carroSelecionado && <AluguelVeiculo carro={carroSelecionado} />}
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   )
 }
