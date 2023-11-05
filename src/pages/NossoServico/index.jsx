@@ -7,7 +7,7 @@ export default function NossoServico() {
   return (
     <div >
       <Header />
-      <div className="container"  >
+      <div className="servico-container"  >
         <h2>Nosso Servico</h2>
 
         <p className="nosso">

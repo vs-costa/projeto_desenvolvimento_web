@@ -1,8 +1,5 @@
 .header-content {
-    
-   
     background-color: #3B3C9A;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 10px 20px;
 }
 
@@ -33,7 +30,7 @@
     color: #FEDD29;
     transition: color 0.3s ease;
     margin-right: 10px;
-    font-size: 12px;
+    /* font-size: 12px; */
 }
 
 .menu a:hover {
