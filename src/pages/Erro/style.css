@@ -1,0 +1,13 @@
+.erro {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 35vh;
+    justify-content: space-around;
+}
+
+/* .erro>h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+} */

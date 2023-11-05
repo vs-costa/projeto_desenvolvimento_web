@@ -1,13 +1,16 @@
 
-
-
-.header {
-    height: 100vh;
-    background: linear-gradient(45deg,#fff 0%, #3DECB1 100%)
+*{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 22px;
 }
 
-.servico-container {
-  margin: 30px auto;
+/* body {
+  height: 100vh;
+  background: linear-gradient(45deg,#fff 0%, #3DECB1 100%)
+} */
+
+.container {
+  margin-left: 10;
   padding: 30px; 
   border-radius: 12px;  
   width: 80%;

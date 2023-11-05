@@ -1,0 +1,56 @@
+.aluguel-veiculos {
+    background-color: #3B3C9A;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 80%; 
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .aluguel-veiculos h2 {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .aluguel-veiculos p {
+
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .aluguel-veiculos h3 {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .aluguel-veiculos label{
+    text-align: center;
+  }
+  
+  .aluguel-veiculos input[type="number"] {
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .aluguel-veiculos button {
+    background-color: #fff;
+    color: #3B3C9A;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  .aluguel-veiculos button:hover {
+    background-color: #ccc;
+  }
+  

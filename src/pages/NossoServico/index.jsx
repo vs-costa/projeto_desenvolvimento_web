@@ -5,16 +5,10 @@ import "./style.css"
 
 export default function NossoServico() {
   return (
-    
-      
-    
-    <div>
-      <Header/>
-      
-        
-      
-      <div className="servico-container"  >
-        <h2>Nosso Serviço</h2>
+    <div >
+      <Header />
+      <div className="container"  >
+        <h2>Nosso Servico</h2>
 
         <p className="nosso">
           Seja para uma viagem de negócios ou uma escapadela de fim de semana, a

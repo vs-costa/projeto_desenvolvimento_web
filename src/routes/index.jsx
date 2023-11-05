@@ -7,6 +7,7 @@ import Veiculos from '../pages/Veiculos'
 import Contato from '../pages/Contato'
 import Login from '../pages/Login'
 import NossoServico from '../pages/NossoServico';
+import Erro from '../pages/Erro'
 
 function AppRouter() {
   return (
@@ -19,6 +20,7 @@ function AppRouter() {
         <Route path='/contato' element={<Contato />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/nossoServico' element={<NossoServico />}></Route>
+        <Route path='/*' element={<Erro />}></Route>
       </Routes>
     </div>
   )
