@@ -1,13 +1,43 @@
-.erro {
-    height: 100%;
-    width: 100%;
+.erro-tamanho {
+    min-height: 100vh;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .erro {
     text-align: center;
-    margin-top: 35vh;
-    justify-content: space-around;
-}
-
-/* .erro>h1 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-} */
+    margin: 50px auto;
+  }
+  
+  .erro h1 {
+    font-size: 3rem;
+    color: #3B3C9A;
+    margin-bottom: 20px;
+  }
+  
+  .erro p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .erro ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .erro ul li {
+    margin-bottom: 10px;
+  }
+  
+  .erro ul li a {
+    color: #3B3C9A;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .erro ul li a:hover {
+    color: #ff6600; /* Cor dos links ao passar o mouse */
+  }
+  

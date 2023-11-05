@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import Header from "../../components/Header";
+import Footer from '../../components/Footer'
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import "./style.css";
@@ -114,6 +115,7 @@ export default function Login() {
                     </div>
                 </div>
             </main>
+            <Footer/>
         </div>
     );
 }

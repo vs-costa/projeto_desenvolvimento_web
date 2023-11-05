@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "./style.css"
+import logo from '../../assets/auto_voyage_logo_branco_horizontal.png'
 
 
 export default function Header() {
@@ -8,7 +9,9 @@ export default function Header() {
         <header className='header-content'>
             <div className='container-header'>
                 <div className='logo'>
-                    <h2>Auto Voyage</h2>
+                    <Link to="/">
+                        <img src={logo} alt="logo auto voyage" />
+                    </Link>
                 </div>
                 <div className='menu'>
                     <Link to={"/"}>Home</Link>
