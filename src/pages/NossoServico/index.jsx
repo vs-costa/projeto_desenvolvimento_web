@@ -24,7 +24,7 @@ export default function NossoServico() {
     <div >
       <Header />
       <div className="container"  >
-        <h2>Nosso Servico</h2>
+        <h2>Nosso Serviço</h2>
 
         <p className="nosso">
 
@@ -34,17 +34,17 @@ export default function NossoServico() {
           conveniente e confortável. Com uma ampla variedade de opções, desde
           carros compactos como o carro tronco, e carros ágeis e espaçosos como
           o carro a prova de balas, temos o veículo perfeito para atender às
-          suas necessidades.Entendemos que as necessidades de cada cliente são
+          suas necessidades. Entendemos que as necessidades de cada cliente são
           únicas. Por isso, oferecemos opções flexíveis de locação, desde
           aluguel por dia até contratos de longo prazo. Seja para uma viagem
           curta ou uma estadia prolongada em uma nova cidade, estamos preparados
           para atender às suas necessidades.
         </p>
       </div>
-      
-      <h2 className="juntar"> Venha se juntar à nossa comunidade</h2> 
+     
+      <h2 className="juntar"> Venha se juntar à nossa comunidade que já possui <strong>{pessoa}</strong> pessoas cadastradas. </h2> 
       <div className="cont">
-      <h1 >{pessoa}</h1> 
+      <h1 ></h1> 
       </div>
      
        
