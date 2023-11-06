@@ -18,6 +18,8 @@
     background-color: #3B3C9A;
     padding: 30px 70px;
     border-radius: 50px;
+    height: 65vh;
+   
 }
 
 .card-post-false h1 {
@@ -36,6 +38,7 @@
     padding: 30px 70px;
     border-radius: 50px;
     visibility: hidden;
+    width: 0;
 }
 
 .card-post-true h1 {
