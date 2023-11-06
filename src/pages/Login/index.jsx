@@ -30,12 +30,13 @@ export default function Login() {
             console.log("deu errado");
         })
 
-    const deletePessoa = (data) => axios.delete("http://localhost:8080/api/pessoa/deletarLogico", data)
+    const deletePessoa = (data) => axios.delete(`http://localhost:8080/api/pessoa/deletarLogico?email=${data.email}&password=${data.password}`)
         .then(() => {
             console.log("deu certo");
             navigate("/");
         })
         .catch(() => {
+            console.log(data);
             console.log("deu errado");
         })
 
