@@ -7,10 +7,11 @@ import "./style.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useRef, useState } from "react";
+import service from "../../service/services";
 
 const validationPost = yup.object().shape({
-    email: yup.string().required("Preencha seu email").max(100, "Até 100 caract."),
-    password: yup.string().required("Preencha sua senha").max(20, "Até 20 caract."),
+    email: yup.string(),
+    password: yup.string()
 });
 
 export default function Login() {
@@ -22,9 +23,11 @@ export default function Login() {
         handleSubmit,
         formState: { errors } } = useForm({ resolver: yupResolver(validationPost) });
 
-    const addPost = (data) => axios.post("http://localhost:8080/api/pessoa/login", data)
-        .then(() => {
+    const addPost = (data) => service.post("/pessoa/login", data)
+        .then((resposta) => {
             console.log("deu certo");
+            console.log(resposta);
+            // localStorage.setItem("token", resposta.data);
             navigate("/");
         })
         .catch(() => {
@@ -37,7 +40,6 @@ export default function Login() {
             navigate("/");
         })
         .catch(() => {
-            console.log(data);
             console.log("deu errado");
         })
 

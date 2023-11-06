@@ -4,6 +4,7 @@ import Header from "../../components/Header";
 import './style.css';
 import AluguelVeiculo from '../../components/AluguelVeiculo';
 import Footer from "../../components/Footer";
+import service from '../../service/services';
 
 export default function Veiculos() {
   const [carros, setCarros] = useState([]);
@@ -13,8 +14,8 @@ export default function Veiculos() {
 
 
   useEffect(() => {
-    axios
-      .get('http://localhost:8080/api/carro/listar')
+    service
+      .get('/carro/listar')
       .then((response) => {
         setCarros(response.data);
         console.log(response.data);
