@@ -41,17 +41,16 @@ export default function Login() {
             console.log("deu errado");
         })
 
-    const dropDownRef = useRef(null);
+    const dropDown = useRef(null);
     const [isActive, setIsActive] = useState(false)
     const troca = () => setIsActive(!isActive)
-    console.log(isActive)
 
 
     return (
         <div className="login">
             <Header />
             <main className="login-body">
-                <div ref={dropDownRef} className={`card-post-${isActive}`}>
+                <div ref={dropDown} className={`card-post-${isActive}`}>
                     <h1>Login</h1>
                     <hr />
                     <div className="card-body-post">
@@ -87,7 +86,7 @@ export default function Login() {
                 </div>
 
 
-                <div ref={dropDownRef} className={`card-post-${!isActive}`}>
+                <div ref={dropDown} className={`card-post-${!isActive}`}>
                     <h1>Deletar conta</h1>
                     <hr />
                     <div className="card-body-post">
