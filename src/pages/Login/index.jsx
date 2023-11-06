@@ -23,25 +23,30 @@ export default function Login() {
         handleSubmit,
         formState: { errors } } = useForm({ resolver: yupResolver(validationPost) });
 
+
     const addPost = (data) => service.post("/pessoa/login", data)
         .then((resposta) => {
             console.log("deu certo");
             console.log(resposta);
-            // localStorage.setItem("token", resposta.data);
+            localStorage.setItem("token", resposta.data);
             navigate("/");
         })
         .catch(() => {
+            console.log(data);
             console.log("deu errado");
         })
 
-    const deletePessoa = (data) => axios.delete(`http://localhost:8080/api/pessoa/deletarLogico?email=${data.email}&password=${data.password}`)
-        .then(() => {
-            console.log("deu certo");
-            navigate("/");
-        })
-        .catch(() => {
-            console.log("deu errado");
-        })
+
+    // const deletePessoa = (data) => axios.delete(`http://localhost:8080/api/pessoa/deletarLogico?email=${data.email}&password=${data.password}`)
+    //     .then(() => {
+    //         console.log("deu certo");
+    //         console.log(data);
+    //         navigate("/");
+    //     })
+    //     .catch(() => {
+    //         console.log(data);
+    //         console.log("deu errado");
+    //     })
 
     const dropDown = useRef(null);
     const [isActive, setIsActive] = useState(false)
@@ -59,10 +64,10 @@ export default function Login() {
                         <form action="#" onSubmit={handleSubmit(addPost)}>
 
                             <div className="fields">
-                                <label htmlFor="email  ">email</label>
+                                <label htmlFor="email">email</label>
                                 <input
                                     type="text"
-                                    id="email "
+                                    id="email"
                                     name="email"
                                     {...register("email")}
                                 />
@@ -88,7 +93,7 @@ export default function Login() {
                 </div>
 
 
-                <div ref={dropDown} className={`card-post-${!isActive}`}>
+                {/* <div ref={dropDown} className={`card-post-${!isActive}`}>
                     <h1>Deletar conta</h1>
                     <hr />
                     <div className="card-body-post">
@@ -121,12 +126,12 @@ export default function Login() {
                             </div>
                         </form>
                     </div>
-                </div>
+                </div> */}
 
             </main>
-            <div className="btn-troca">
+            {/* <div className="btn-troca">
                 <button onClick={troca} className={`botao-${isActive}`}>{isActive ? "fazer Login" : "Deletar conta"}</button>
-            </div>
+            </div> */}
             <Footer />
         </div>
     );
