@@ -10,8 +10,8 @@ import { useRef, useState } from "react";
 import service from "../../service/services";
 
 const validationPost = yup.object().shape({
-    email: yup.string(),
-    password: yup.string()
+    email: yup.string().required("Preencha seu email").max(100, "Até 100 caract."),
+    password: yup.string().required("Preencha sua senha").max(100, "Até 100 caract.")
 });
 
 export default function Login() {
@@ -57,6 +57,7 @@ export default function Login() {
         <div className="login">
             <Header />
             <main className="login-body">
+
                 <div ref={dropDown} className={`card-post-${isActive}`}>
                     <h1>Login</h1>
                     <hr />
@@ -129,9 +130,9 @@ export default function Login() {
                 </div> */}
 
             </main>
-            {/* <div className="btn-troca">
+            <div className="btn-troca">
                 <button onClick={troca} className={`botao-${isActive}`}>{isActive ? "fazer Login" : "Deletar conta"}</button>
-            </div> */}
+            </div>
             <Footer />
         </div>
     );
