@@ -6,6 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import "./style.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useRef, useState } from "react";
 
 const validationPost = yup.object().shape({
     email: yup.string().required("Preencha seu email").max(100, "Até 100 caract."),
@@ -40,12 +41,17 @@ export default function Login() {
             console.log("deu errado");
         })
 
+    const dropDownRef = useRef(null);
+    const [isActive, setIsActive] = useState(false)
+    const troca = () => setIsActive(!isActive)
+    console.log(isActive)
+
 
     return (
         <div className="login">
             <Header />
             <main className="login-body">
-                <div className="card-post">
+                <div ref={dropDownRef} className={`card-post-${isActive}`}>
                     <h1>Login</h1>
                     <hr />
                     <div className="card-body-post">
@@ -81,7 +87,7 @@ export default function Login() {
                 </div>
 
 
-                <div className="card-post">
+                <div ref={dropDownRef} className={`card-post-${!isActive}`}>
                     <h1>Deletar conta</h1>
                     <hr />
                     <div className="card-body-post">
@@ -115,7 +121,11 @@ export default function Login() {
                         </form>
                     </div>
                 </div>
+
             </main>
+            <div className="btn-troca">
+                <button onClick={troca} className={`botao-${isActive}`}>{isActive ? "fazer Login" : "Deletar conta"}</button>
+            </div>
             <Footer />
         </div>
     );
