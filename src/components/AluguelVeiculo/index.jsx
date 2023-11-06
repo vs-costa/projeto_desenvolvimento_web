@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './style.css'
 
+
 const AluguelVeiculo = ({ carro }) => {
   const [diasAluguel, setDiasAluguel] = useState(1);
 
@@ -15,12 +16,13 @@ const AluguelVeiculo = ({ carro }) => {
   };
 
   const reservarAgora = () => {
-    window.location.href = 'http://localhost:5173/login';
+    window.location.href = "http://localhost:5173/login";
   };
 
   return (
     <div className='aluguel-veiculos'>
       <h2>Aluguel de {carro.nome}</h2>
+      <img src={carro.img} alt={carro.nome} />
       <p>{carro.descricao}</p>
       <h3>Valor da diária: R$ {carro.valor.toFixed(2)}</h3>
       <label>Quantidade de dias:
