@@ -9,6 +9,10 @@ import axios from "axios";
 export default function NossoServico() {
 
   const [pessoa, setPessoa] = useState([]);
+  const [fontSize, setFontSize] = useState(16);
+  
+  
+  
   useEffect(() => {
     axios
       .get('http://localhost:8080/api/pessoa/count')
@@ -19,15 +23,32 @@ export default function NossoServico() {
         console.log("Erro. A requisição solicitada não é válida.");
       })
   }, []);
-     
+
+  
+
+  const decreaseFontSize = () => {
+    document.body.style.fontSize = `${fontSize - 2}px`;
+    setFontSize(prevSize => prevSize - 2);
+  }
+
+  const increaseFontSize = () => {
+    document.body.style.fontSize = `${fontSize + 2}px`;
+    setFontSize(prevSize => prevSize + 2);
+  }
+
+   
   return (
     <div >
       <Header />
-      <div className="container"  >
-        <h2>Nosso Serviço</h2>
+      <div className="button">
+      <button onClick={increaseFontSize}>Aumentar Fonte</button> 
+      <button onClick={decreaseFontSize}>Diminuir Fonte</button>  
+      </div>
 
-        <p className="nosso">
-
+      <div className="container">   
+        <h2>Nosso Serviço</h2>    
+        <p className="nosso"> 
+        
         
           Seja para uma viagem de negócios ou uma escapadela de fim de semana, a
           nossa locadora de veículos está aqui para tornar a sua jornada mais
@@ -44,6 +65,7 @@ export default function NossoServico() {
      
       <h2 className="juntar"> Venha se juntar à nossa comunidade que já possui <strong>{pessoa}</strong> pessoas cadastradas. </h2> 
       <div className="cont">
+     
       <h1 ></h1> 
       </div>
      
@@ -109,9 +131,18 @@ export default function NossoServico() {
             orientações necessárias.
           </li>
         </ul>
+       
+
+       
+
+
       </div>
       <Footer/>
     </div>
     
   );
 }
+
+
+
+

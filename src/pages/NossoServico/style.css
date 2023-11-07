@@ -85,7 +85,27 @@ margin-bottom: 40px;
 
 
 
+.button {
+  border-radius: 200%;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration : none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;  
+  margin-top: 10px;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-color: blue;
+  border-radius: 50%;
+  transition: background-color 0.30s;  
+  background-color: #3B3C9A;
+  
 
+}
 
 
 
