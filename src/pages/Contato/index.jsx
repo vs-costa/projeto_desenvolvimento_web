@@ -10,37 +10,29 @@ import { useRef, useState } from "react";
 import service from "../../service/services";
 
 const validationPost = yup.object().shape({
+  nome: yup.string().required("Preencha seu nome").max(100, "Até 100 caract."),
   email: yup.string().required("Preencha seu email").max(100, "Até 100 caract."),
-  password: yup.string().required("Preencha sua senha").max(100, "Até 100 caract.")
+  mensagem: yup.string().required("Preencha sua mensagem").max(255, "Até 255 caract.")
 });
 
 export default function Contato() {
-  const [formData, setFormData] = useState({
-    nome: "",
-    email: "",
-    mensagem: ""
-  });
+
+  let navigate = useNavigate();
 
   const {
     register,
     handleSubmit,
     formState: { errors } } = useForm({ resolver: yupResolver(validationPost) });
-  
-
-  try{
-    const response = () => axios.post('localhost:8080/api/pessoa/mensagem', formData);
-    console.log('Resposta da API:', response.data);
-
-  } catch(error) {
-    console.error('Erro ao enviar formulario', error);
-  }
 
 
-const handleChange = (e) => {
-  setFormData({...formData, [e.target.name]: e.target.value });
-};
 
-
+  const mandar = (formData) => axios.post(`http://localhost:8080/api/pessoa/mensagem?nome=${formData.nome}&email=${formData.email}&mensagem=${formData.mensagem}`)
+    .then(() => {
+      console.log('deu certo');
+    }).catch(() => {
+      console.log(formData);
+      console.error('Erro ao enviar formulario');
+    })
 
   return (
     <div>
@@ -49,18 +41,17 @@ const handleChange = (e) => {
         <div className='card-post'>
           <h2>Formulário</h2>
           <hr />
-          <form onSubmit={handleSubmit}>
-            <div className='fields'>
+          <form action="#" onSubmit={handleSubmit(mandar)}>
 
+            <div className='fields'>
               <label htmlFor="nome">Nome:</label>
               <input
                 type="text"
                 id="nome"
+                name="nome"
                 {...register("nome")}
-                // value={FormData.nome}
-                // onChange={handleChange} 
-                />
-
+              />
+              <p className="error-message">{errors.nome?.message}</p>
             </div>
 
             <div className='fields'>
@@ -68,10 +59,11 @@ const handleChange = (e) => {
               <input
                 type="email"
                 id="email"
+                name="email"
                 {...register("email")}
-                // value={FormData.email}
-                // onChange={handleChange} 
-                />
+              />
+              <p className="error-message">{errors.email?.message}</p>
+
             </div>
 
             <div className='fields'>
@@ -81,18 +73,18 @@ const handleChange = (e) => {
                 rows="10"
                 type="text"
                 id="mensagem"
+                name="mensagem"
                 {...register("mensagem")}
-                // value={FormData.mensagem}
-                // onChange={handleChange}
-                />
+              />
+              <p className="error-message">{errors.mensagem?.message}</p>
             </div>
             <div className="btn-post">
-              <button type="submit">Enviar</button>
+              <button>Enviar</button>
             </div>
           </form>
         </div>
       </main>
-      <Footer/>
+      <Footer />
     </div>
   );
-  };
+};

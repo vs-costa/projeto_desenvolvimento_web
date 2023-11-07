@@ -42,44 +42,44 @@ export default function DeletarConta() {
   return (
     <div className="login">
       <Header />
-            <div className="btn-troca">
-                <button onClick={troca} className={`botao-${isActive}`}>{isActive ? "tem certeza :(" : "Deletar conta"}</button>
-            </div>
+      <div className="btn-troca">
+        <button onClick={troca} className={`botao-${isActive}`}>{isActive ? "tem certeza :(" : "Deletar conta"}</button>
+      </div>
       <main className="login-body">
         <div ref={dropDown} className={`card-post-${!isActive}`}>
-                    <h1>Deletar conta</h1>
-                    <hr />
-                    <div className="card-body-post">
-                        <form action="#" onSubmit={handleSubmit(deletePessoa)}>
+          <h1>Deletar conta</h1>
+          <hr />
+          <div className="card-body-post">
+            <form action="#" onSubmit={handleSubmit(deletePessoa)}>
 
-                            <div className="fields">
-                                <label htmlFor="email  ">email</label>
-                                <input
-                                    type="text"
-                                    id="email "
-                                    name="email"
-                                    {...register("email")}
-                                />
-                                <p className="error-message">{errors.email?.message}</p>
-                            </div>
+              <div className="fields">
+                <label htmlFor="email  ">email</label>
+                <input
+                  type="text"
+                  id="email "
+                  name="email"
+                  {...register("email")}
+                />
+                <p className="error-message">{errors.email?.message}</p>
+              </div>
 
-                            <div className="fields">
-                                <label htmlFor="password">Senha</label>
-                                <input
-                                    type="text"
-                                    id="password"
-                                    name="password"
-                                    {...register("password")}
-                                />
-                                <p className="error-message">{errors.senha?.message}</p>
-                            </div>
+              <div className="fields">
+                <label htmlFor="password">Senha</label>
+                <input
+                  type="text"
+                  id="password"
+                  name="password"
+                  {...register("password")}
+                />
+                <p className="error-message">{errors.senha?.message}</p>
+              </div>
 
-                            <div className="btn-post">
-                                <button>Deletar</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+              <div className="btn-post">
+                <button>Deletar</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </main>
 
       <Footer />
