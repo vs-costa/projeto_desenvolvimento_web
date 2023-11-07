@@ -23,7 +23,6 @@
 }
 
 .card-post-false h1 {
-    font-family: Heebo;
     font-weight: 400;
     text-align: center;
 
@@ -42,7 +41,6 @@
 }
 
 .card-post-true h1 {
-    font-family: Heebo;
     font-weight: 400;
     text-align: center;
 
@@ -72,8 +70,6 @@ label {
     font-size: 1.2rem;
 
     color: #FEDD29;
-
-    font-family: Poppins;
 }
 
 input,
@@ -106,7 +102,6 @@ textarea {
 }
 
 .btn-post button {
-    font-family: Heebo;
     font-weight: 800;
     font-size: 1.3rem;
 
@@ -134,7 +129,6 @@ textarea {
 }
 
 .botao-true{
-    font-family: Heebo;
     font-weight: 800;
     font-size: 1.3rem;
 
@@ -149,7 +143,6 @@ textarea {
 }
 
 .botao-false{
-    font-family: Heebo;
     font-weight: 800;
     font-size: 1.3rem;
 
