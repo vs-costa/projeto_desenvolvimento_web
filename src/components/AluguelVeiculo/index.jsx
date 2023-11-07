@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
-import './style.css'
+import './style.css';
+import { useNavigate } from 'react-router-dom';
 
+export default function AluguelVeiculo({ carro }) {
 
-const AluguelVeiculo = ({ carro }) => {
   const [diasAluguel, setDiasAluguel] = useState(1);
+
+  const navigate = useNavigate();
 
   const handleDiasChange = (event) => {
     const dias = event.target.value;
@@ -16,7 +19,7 @@ const AluguelVeiculo = ({ carro }) => {
   };
 
   const reservarAgora = () => {
-    window.location.href = "http://localhost:5173/login";
+    navigate('/login')
   };
 
   return (
@@ -32,6 +35,4 @@ const AluguelVeiculo = ({ carro }) => {
       <button className='botao' onClick={reservarAgora}>RESERVE AGORA</button>
     </div>
   );
-};
-
-export default AluguelVeiculo;
+}
