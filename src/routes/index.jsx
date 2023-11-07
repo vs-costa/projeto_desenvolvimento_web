@@ -8,6 +8,7 @@ import Contato from '../pages/Contato'
 import Login from '../pages/Login'
 import NossoServico from '../pages/NossoServico';
 import Erro from '../pages/Erro'
+import DeletarConta from '../pages/DeletarConta'
 
 function AppRouter() {
   return (
@@ -20,6 +21,7 @@ function AppRouter() {
         <Route path='/contato' element={<Contato />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/nossoServico' element={<NossoServico />}></Route>
+        <Route path='/deletarConta' element={<DeletarConta />}></Route>
         <Route path='/*' element={<Erro />}></Route>
       </Routes>
     </div>
