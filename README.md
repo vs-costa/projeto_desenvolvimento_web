@@ -4,7 +4,7 @@ Este repositório contém o projeto de locação de carros, desenvolvido como pa
 
 ## Tecnologias Utilizadas
 
-- **Frontend:** React.js
+- **Frontend:** React.js, Axios, React Hook, React Router DOM, Yup
 - **Backend:** Java 11, Spring Boot 2.7
 - **Documentação da API:** Swagger
 
@@ -34,7 +34,7 @@ Este repositório contém o projeto de locação de carros, desenvolvido como pa
 ## Como Executar o Projeto
 
 1. Clone este repositório para o seu ambiente local.
-2. Configure e inicie o frontend usando `npm install` e `npm start`.
+2. Configure e inicie o frontend usando `npm install` e `npm run dev`.
 3. Importe o projeto backend em sua IDE favorita e inicie o aplicativo Spring Boot.
 
 Isso permitirá que você acesse o sistema localmente e explore suas funcionalidades.
