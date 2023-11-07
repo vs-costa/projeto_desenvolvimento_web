@@ -1,9 +1,7 @@
 .registro {
         height: 100%;
         width: 100%;
-        background: linear-gradient(45deg,
-                #fff 0%,
-                #3DECB1 100%)
+
 }
 
 .registro-body {

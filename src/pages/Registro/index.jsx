@@ -43,7 +43,7 @@ export default function Registro() {
       <Header />
       <main className="registro-body">
         <div className="card-post">
-          <h1>Cadastro</h1>
+          <h1>CADASTRO</h1>
           <hr />
           <div className="card-body-post">
             <form action="#" onSubmit={handleSubmit(addPost)}>

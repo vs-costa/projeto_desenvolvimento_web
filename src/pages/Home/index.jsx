@@ -18,17 +18,17 @@ function Carrossel() {
       <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true} stopOnHover={true}>
  <Link to={"/nossoServico"}> 
           <div>
-            <img src={banner01} alt="Imagem 1" style={{ width: '1000px' }} />
+            <img src={banner01} alt="Imagem 1" style={{ height: '85vh' }} />
           </div>
       </Link>
       <Link to={"/veiculos"}>
           <div>
-            <img src={banner02} alt="Imagem 2" style={{ width: '1000px' }} />
+            <img src={banner02} alt="Imagem 2" style={{ height: '85vh' }} />
           </div>
         </Link>
         <Link to={"/sobre"}>
           <div>
-            <img src={banner03} alt="Imagem 3" style={{ width: '1000px' }} />
+            <img src={banner03} alt="Imagem 3" style={{ height: '85vh' }} />
           </div>
         </Link>
     </Carousel>

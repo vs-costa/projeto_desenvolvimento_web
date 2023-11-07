@@ -59,7 +59,7 @@ export default function Login() {
             <main className="login-body">
 
                 <div ref={dropDown} className={`card-post-${isActive}`}>
-                    <h1>Login</h1>
+                    <h1>LOGIN</h1>
                     <hr />
                     <div className="card-body-post">
                         <form action="#" onSubmit={handleSubmit(addPost)}>

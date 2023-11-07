@@ -10,21 +10,21 @@ main {
     background-color: #3a339c;
     padding: 30px 70px;
     border-radius: 15px;
+    text-align: center;
 }
 
-.card-post h1{
+.card-post h2{
     font-weight: 400;
-    text-align: center;
+    font-weight: bold;
 
-    color: #D2DAF5;
+    color: #FEDD29;
 
     font-size: 3rem;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 .line-post {
     height: 2px;
-    background-color: #3E445B;
 }
 
 .card-body-post {
@@ -34,6 +34,7 @@ main {
 
 .fields {
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 label {

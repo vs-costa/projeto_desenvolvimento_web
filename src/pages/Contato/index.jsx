@@ -39,7 +39,7 @@ export default function Contato() {
       <Header />
       <main>
         <div className='card-post'>
-          <h2>Formulário</h2>
+          <h2>FORMULARIO</h2>
           <hr />
           <form action="#" onSubmit={handleSubmit(mandar)}>
 
