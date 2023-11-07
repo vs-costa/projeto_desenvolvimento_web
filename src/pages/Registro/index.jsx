@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import Header from "../../components/Header";
+import Footer from '../../components/Footer'
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import "./style.css";
@@ -11,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 const validationPost = yup.object().shape({
   nome: yup.string().required("Preencha seu nome").max(100, "Até 100 caract."),
   email: yup.string().required("Preencha seu email").max(100, "Até 100 caract."),
-  senha: yup.string().required("Preencha sua senha").max(20, "Até 20 caract."),
+  password: yup.string().required("Preencha sua senha").max(20, "Até 20 caract."),
   cpf: yup.string().required("Preencha seu CPF").max(11, "Até 11 caract."),
   cep: yup.string().required("Preencha seu CEP(só numeros)").max(8, "Até 8 caract."),
   complemento: yup.string().required("Preencha o complemento").max(100, "Até 100 caract."),
@@ -33,6 +34,7 @@ export default function Registro() {
       navigate("/");
     })
     .catch(() => {
+      console.log(data);
       console.log("deu errado");
     })
 
@@ -41,7 +43,7 @@ export default function Registro() {
       <Header />
       <main className="registro-body">
         <div className="card-post">
-          <h1>Cadastro</h1>
+          <h1>CADASTRO</h1>
           <hr />
           <div className="card-body-post">
             <form action="#" onSubmit={handleSubmit(addPost)}>
@@ -132,6 +134,7 @@ export default function Registro() {
           </div>
         </div>
       </main>
+      <Footer/>
     </div>
   );
 }

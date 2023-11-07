@@ -1,0 +1,93 @@
+.veiculos {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .veiculos-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .titulo {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .titulo h1 {
+    font-size: 7vh;
+    color: #3B3C9A;
+    margin-bottom: 15px;
+  }
+  
+  .titulo h5 {
+    font-size: 3vh;
+    color: #666;
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 80%;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+  
+  .card-titulo {
+    background-color: #3B3C9A;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .card-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .card-conteudo {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .card-conteudo p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .card-conteudo h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .card-conteudo h5 {
+    font-size: 20px;
+    color: #ff6600;
+    margin-bottom: 20px;
+  }
+  
+  .botao {
+    background-color: #FEDD29;
+    color: #3B3C9A;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .botao:hover {
+    background-color: orange;
+  }
+  
+

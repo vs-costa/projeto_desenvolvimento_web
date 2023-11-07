@@ -1,9 +1,7 @@
 .login {
     height: 100vh;
     width: 100%;
-    background: linear-gradient(45deg,
-            #fff 0%,
-            #3DECB1 100%)
+   
 }
 
 .login-body {
@@ -14,14 +12,33 @@
     padding: 3rem 0;
 }
 
-.card-post {
+.card-post-false {
     background-color: #3B3C9A;
     padding: 30px 70px;
     border-radius: 50px;
+    height: 65vh;
+   
 }
 
-.card-post h1 {
-    font-family: Heebo;
+.card-post-false h1 {
+    font-weight: 400;
+    text-align: center;
+
+    color: #FEDD29;
+
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+.card-post-true {
+    background-color: #3B3C9A;
+    padding: 30px 70px;
+    border-radius: 50px;
+    visibility: hidden;
+    width: 0;
+}
+
+.card-post-true h1 {
     font-weight: 400;
     text-align: center;
 
@@ -51,8 +68,6 @@ label {
     font-size: 1.2rem;
 
     color: #FEDD29;
-
-    font-family: Poppins;
 }
 
 input,
@@ -85,7 +100,6 @@ textarea {
 }
 
 .btn-post button {
-    font-family: Heebo;
     font-weight: 800;
     font-size: 1.3rem;
 
@@ -102,4 +116,40 @@ textarea {
 
 .error-message {
     color: rgb(240, 47, 47);
+}
+
+.btn-troca {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.botao-true{
+    font-weight: 800;
+    font-size: 1.3rem;
+
+    padding: 5px 50px;
+    color: #FEDD29;
+    background-color: #9A9AC8;
+
+    border: 0;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.botao-false{
+    font-weight: 800;
+    font-size: 1.3rem;
+
+    padding: 5px 50px;
+    background-color: #9A9AC8;
+
+    border: 0;
+    border-radius: 10px;
+
+    cursor: pointer;
+    color: red;
 }
