@@ -7,11 +7,11 @@ import { useNavigate } from 'react-router-dom';
 
 import "./style.css"
 import patricia from '../../assets/patricia.jpg'
-import pedro from '../../assets/pedro.png'
-import tamires from '../../assets/Tamires.png'
-import thadeu from '../../assets/thadeu.png'
+import pedro from '../../assets/Pedro-Horacio.png'
+import tamires from '../../assets/tamires.jpg'
+import thadeu from '../../assets/thadeu.jpg'
 import victor from '../../assets/victor.png'
-import wallace from '../../assets/wallace.png'
+import wallace from '../../assets/wallace.jpg'
 
 import {Carousel} from 'react-responsive-carousel' 
 import "react-responsive-carousel/lib/styles/carousel.min.css"
