@@ -1,21 +1,23 @@
 import React from 'react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+
 
 import "./style.css"
-import foto01 from '../../assets/patricia.jpg'
-import foto02 from '../../assets/pedro.png'
-import foto03 from '../../assets/Tamires.png'
-import foto04 from '../../assets/thadeu.png'
-import foto05 from '../../assets/victor.png'
-import foto06 from '../../assets/wallace.png'
+import patricia from '../../assets/patricia.jpg'
+import pedro from '../../assets/pedro.png'
+import tamires from '../../assets/Tamires.png'
+import thadeu from '../../assets/thadeu.png'
+import victor from '../../assets/victor.png'
+import wallace from '../../assets/wallace.png'
 
 import {Carousel} from 'react-responsive-carousel' 
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 
 
-export default function Sobre() {
+export default function Sobre() {    
     return (
       <div>
         <Header />
@@ -31,32 +33,50 @@ export default function Sobre() {
             <div className='carrossel-sobre'>
             <h2 className='integrantes'>Integrantes do grupo</h2>
               <Carousel>
-                
-                    <div className='slider-sobre'>
-                      
-                    <img src={foto01} alt="foto 1"/>
-                    <h4 className='legenda'>Patricia Starck </h4>                         
+                                      
+                                  
+                    <Link to={"https://github.com/patriciastarck"}>
+                    <div className='slider-sobre'> 
+                    <img src={patricia} alt="Imagem 1"  />
+                    <h4 className='legenda'>Patricia Starck </h4>
                     </div>
-                    <div className='slider-sobre'>
-                      <img src={foto02} alt="foto 2" />
-                      <h4 className='legenda'>Pedro Horacio</h4>
+                    </Link>
+
+                    <Link to={"https://github.com/Pedroh88"}>
+                    <div className='slider-sobre'> 
+                    <img src={pedro} alt="Imagem 1"  />
+                    <h4 className='legenda'>Pedro Horacio </h4>
                     </div>
-                    <div className='slider-sobre'>
-                      <img src={foto03} alt="foto 3" />
-                      <h4 className='legenda'>Tammires Ferreira</h4>
+                    </Link>   
+
+                    <Link to={"https://github.com/tamiresf"}>
+                    <div className='slider-sobre'> 
+                    <img src={tamires} alt="Imagem 1"  />
+                    <h4 className='legenda'>Tamires Ferreira </h4>
                     </div>
-                    <div className='slider-sobre'>
-                      <img src={foto04} alt="Imagem 3" />
-                      <h4 className='legenda'>Thadeu Góes</h4>
-                    </div>
-                    <div className='slider-sobre'>
-                      <img src={foto05} alt="Imagem 3" />
-                      <h4 className='legenda'>Victor Souza</h4>
-                    </div>
-                    <div className='slider-sobre'>
-                      <img src={foto06} alt="Imagem 3" />
-                      <h4 className='legenda'>Wallace Henriques</h4>
-                    </div>
+                    </Link>            
+
+                    <Link to={"https://github.com/ThadeuGoes"}>
+                    <div className='slider-sobre'> 
+                    <img src={thadeu} alt="Imagem 1"  />
+                    <h4 className='legenda'>Thadeu Góes </h4>
+                    </div>                    
+                    </Link>
+
+                    <Link to={"https://github.com/VictorSoares-C"}>
+                    <div className='slider-sobre'> 
+                    <img src={victor} alt="Imagem 1"  />
+                    <h4 className='legenda'>Victor Soares </h4>
+                    </div>                    
+                    </Link>
+
+                    <Link to={"https://github.com/WallaceHenriques"}>
+                    <div className='slider-sobre'> 
+                    <img src={wallace} alt="Imagem 1"  />
+                    <h4 className='legenda'>Wallace henriques </h4>
+                    </div>                    
+                    </Link>                   
+                    
                   </Carousel>
             </div>
           

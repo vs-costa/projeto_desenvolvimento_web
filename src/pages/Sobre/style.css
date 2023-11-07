@@ -36,15 +36,18 @@
   text-align: center;
   margin-bottom: 30px;
   color: #3B3C9A;
+  
 }
 
 .legenda {
   margin-top: 8px;
   color: #666;
+  text-decoration: none;
 }
 
+
 .carrossel-sobre {
-    width: 30%;
+    width: 28%;
     overflow: hidden;
     position: relative;
     margin: 0 auto;
