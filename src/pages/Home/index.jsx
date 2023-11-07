@@ -5,26 +5,26 @@ import './style.css';
 import banner01 from '../../assets/banner01.png'
 import banner02 from '../../assets/banner02.png'
 import banner03 from '../../assets/banner03.png'
+import {Carousel} from 'react-responsive-carousel' 
+import "react-responsive-carousel/lib/styles/carousel.min.css"
 
 function Carrossel() {
 
   return (
     <div className='home' >
       <Header/>
-      <div className="carrossel">
-        <div className="carrossel-inner">
-          <div className="carrossel-item active">
-            <img src={banner01} alt="Slide 1" />
-          </div>
-          <div className="carrossel-item">
-            <img src={banner02} alt="Slide 2" />
-          </div>
-          <div className="carrossel-item">
-            <img src={banner03} alt="Slide 3" />
-          </div>
-        </div>
+      <Carousel>
+      <div>
+        <img src={banner01} alt="Imagem 1" />
       </div>
-      <Footer/>
+      <div>
+        <img src={banner02} alt="Imagem 2" />
+      </div>
+      <div>
+        <img src={banner03} alt="Imagem 3" />
+      </div>
+    </Carousel>
+       <Footer/>
     </div>
   );
 };
