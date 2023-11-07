@@ -13,15 +13,15 @@ function Carrossel() {
   return (
     <div className='home' >
       <Header/>
-      <Carousel>
+      <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true} stopOnHover={true}>
       <div>
-        <img src={banner01} alt="Imagem 1" />
+        <img src={banner01} alt="Imagem 1"  style={{width: '1000px'}}/>
       </div>
       <div>
-        <img src={banner02} alt="Imagem 2" />
+        <img src={banner02} alt="Imagem 2" style={{width: '1000px'}}/>
       </div>
       <div>
-        <img src={banner03} alt="Imagem 3" />
+        <img src={banner03} alt="Imagem 3" style={{width: '1000px'}} />
       </div>
     </Carousel>
        <Footer/>
