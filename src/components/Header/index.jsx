@@ -30,7 +30,6 @@ export default function Header() {
                     <Link to={"/contato"}>Contato</Link>
                     <Link to={"/registro"}>Cadastro</Link>
                     <Link to={"/login"}>Login</Link>
-                    <Link to={"/deletarConta"}>Deletar conta</Link>
                 </div>
             </div>
         </header>

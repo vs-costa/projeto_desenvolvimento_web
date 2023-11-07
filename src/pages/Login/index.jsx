@@ -131,7 +131,7 @@ export default function Login() {
 
             </main>
             <div className="btn-troca">
-                <button onClick={troca} className={`botao-${isActive}`}>{isActive ? "fazer Login" : "Deletar conta"}</button>
+                <button onClick={()=>navigate("/deletarConta")} className={`botao-${isActive}`}>{isActive ? "fazer Login" : "Deletar conta"}</button>
             </div>
             <Footer />
         </div>

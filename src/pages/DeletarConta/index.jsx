@@ -43,7 +43,7 @@ export default function DeletarConta() {
     <div className="login">
       <Header />
             <div className="btn-troca">
-                <button onClick={troca} className={`botao-${isActive}`}>{isActive ? "fazer Login" : "Deletar conta"}</button>
+                <button onClick={troca} className={`botao-${isActive}`}>{isActive ? "tem certeza :(" : "Deletar conta"}</button>
             </div>
       <main className="login-body">
         <div ref={dropDown} className={`card-post-${!isActive}`}>
