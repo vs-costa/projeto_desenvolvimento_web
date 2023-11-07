@@ -1,22 +1,47 @@
-import React, { useState } from 'react';
-import Header from "../../components/Header"
-import "./style.css"
-import Footer from '../../components/Footer';
+import { useForm } from "react-hook-form";
+import Header from "../../components/Header";
+import Footer from '../../components/Footer'
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+import "./style.css";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { useRef, useState } from "react";
+import service from "../../service/services";
+
+const validationPost = yup.object().shape({
+  email: yup.string().required("Preencha seu email").max(100, "Até 100 caract."),
+  password: yup.string().required("Preencha sua senha").max(100, "Até 100 caract.")
+});
 
 export default function Contato() {
-  const [nome, setNome] = useState('');
-  const [email, setEmail] = useState('');
-  const [mensagem, setmensagem] = useState('');
+  const [formData, setFormData] = useState({
+    nome: "",
+    email: "",
+    mensagem: ""
+  });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors } } = useForm({ resolver: yupResolver(validationPost) });
+  
 
-    console.log('Nome:', nome);
-    console.log('Email:', email);
-    console.log('Mensagem:', mensagem);
+  try{
+    const response = () => axios.post('localhost:8080/api/pessoa/mensagem', formData);
+    console.log('Resposta da API:', response.data);
+
+  } catch(error) {
+    console.error('Erro ao enviar formulario', error);
+  }
 
 
-  };
+const handleChange = (e) => {
+  setFormData({...formData, [e.target.name]: e.target.value });
+};
+
+
+
   return (
     <div>
       <Header />
@@ -31,8 +56,10 @@ export default function Contato() {
               <input
                 type="text"
                 id="nome"
-                value={nome}
-                onChange={(e) => setNome(e.target.value)} />
+                {...register("nome")}
+                // value={FormData.nome}
+                // onChange={handleChange} 
+                />
 
             </div>
 
@@ -41,8 +68,10 @@ export default function Contato() {
               <input
                 type="email"
                 id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)} />
+                {...register("email")}
+                // value={FormData.email}
+                // onChange={handleChange} 
+                />
             </div>
 
             <div className='fields'>
@@ -52,18 +81,18 @@ export default function Contato() {
                 rows="10"
                 type="text"
                 id="mensagem"
-                value={mensagem}
-                onChange={(e) => setmensagem(e.target.value)} ></textarea>
+                {...register("mensagem")}
+                // value={FormData.mensagem}
+                // onChange={handleChange}
+                />
             </div>
-
-            <div class="btn-post">
-              <button type="submit" onCl>Enviar</button>
+            <div className="btn-post">
+              <button type="submit">Enviar</button>
             </div>
-
           </form>
         </div>
       </main>
       <Footer/>
     </div>
   );
-}
+  };
