@@ -13,7 +13,6 @@ main {
 }
 
 .card-post h1{
-    font-family: Heebo;
     font-weight: 400;
     text-align: center;
 
@@ -43,8 +42,6 @@ label {
     font-size: 1.2rem;
 
     color: #D2DAF5;
-
-    font-family: Poppins;
 }
 
 input, textarea {
@@ -76,7 +73,6 @@ textarea {
 }
 
 .btn-post button{
-    font-family: Heebo;
     font-weight: 800;
     font-size: 1.3rem;
 

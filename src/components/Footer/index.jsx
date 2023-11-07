@@ -27,7 +27,7 @@ export default function Footer() {
                 </div>
             </footer>
             <div className="copyright">
-                <p>&copy; 2023 Resiência Serratec - Desenvolvimento Web - Grupo 6. Todos os direitos reservados.</p>
+                <p>&copy; 2023 Residência Serratec - Desenvolvimento Web - Grupo 6. Todos os direitos reservados.</p>
             </div>
         </div>
     )

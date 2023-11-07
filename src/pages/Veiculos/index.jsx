@@ -14,8 +14,7 @@ export default function Veiculos() {
 
 
   useEffect(() => {
-    service
-      .get('/carro/listar')
+    service.get('/carro/listar')
       .then((response) => {
         setCarros(response.data);
         console.log(response.data);

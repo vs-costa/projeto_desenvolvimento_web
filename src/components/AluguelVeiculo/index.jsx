@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
-import './style.css'
+import './style.css';
+import { useNavigate } from 'react-router-dom';
 
-const AluguelVeiculo = ({ carro }) => {
+export default function AluguelVeiculo({ carro }) {
+
   const [diasAluguel, setDiasAluguel] = useState(1);
+
+  const navigate = useNavigate();
 
   const handleDiasChange = (event) => {
     const dias = event.target.value;
@@ -15,12 +19,13 @@ const AluguelVeiculo = ({ carro }) => {
   };
 
   const reservarAgora = () => {
-    window.location.href = 'http://localhost:5173/login';
+    navigate('/login')
   };
 
   return (
     <div className='aluguel-veiculos'>
       <h2>Aluguel de {carro.nome}</h2>
+      <img src={carro.img} alt={carro.nome} />
       <p>{carro.descricao}</p>
       <h3>Valor da diária: R$ {carro.valor.toFixed(2)}</h3>
       <label>Quantidade de dias:
@@ -30,6 +35,4 @@ const AluguelVeiculo = ({ carro }) => {
       <button className='botao' onClick={reservarAgora}>RESERVE AGORA</button>
     </div>
   );
-};
-
-export default AluguelVeiculo;
+}
