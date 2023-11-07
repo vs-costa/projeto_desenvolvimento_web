@@ -7,10 +7,11 @@ import "./style.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useRef, useState } from "react";
+import service from "../../service/services";
 
 const validationPost = yup.object().shape({
     email: yup.string().required("Preencha seu email").max(100, "Até 100 caract."),
-    password: yup.string().required("Preencha sua senha").max(20, "Até 20 caract."),
+    password: yup.string().required("Preencha sua senha").max(100, "Até 100 caract.")
 });
 
 export default function Login() {
@@ -22,24 +23,30 @@ export default function Login() {
         handleSubmit,
         formState: { errors } } = useForm({ resolver: yupResolver(validationPost) });
 
-    const addPost = (data) => axios.post("http://localhost:8080/api/pessoa/login", data)
-        .then(() => {
-            console.log("deu certo");
-            navigate("/");
-        })
-        .catch(() => {
-            console.log("deu errado");
-        })
 
-    const deletePessoa = (data) => axios.delete(`http://localhost:8080/api/pessoa/deletarLogico?email=${data.email}&password=${data.password}`)
-        .then(() => {
+    const addPost = (data) => service.post("/pessoa/login", data)
+        .then((resposta) => {
             console.log("deu certo");
+            console.log(resposta);
+            localStorage.setItem("token", resposta.data);
             navigate("/");
         })
         .catch(() => {
             console.log(data);
             console.log("deu errado");
         })
+
+
+    // const deletePessoa = (data) => axios.delete(`http://localhost:8080/api/pessoa/deletarLogico?email=${data.email}&password=${data.password}`)
+    //     .then(() => {
+    //         console.log("deu certo");
+    //         console.log(data);
+    //         navigate("/");
+    //     })
+    //     .catch(() => {
+    //         console.log(data);
+    //         console.log("deu errado");
+    //     })
 
     const dropDown = useRef(null);
     const [isActive, setIsActive] = useState(false)
@@ -50,6 +57,7 @@ export default function Login() {
         <div className="login">
             <Header />
             <main className="login-body">
+
                 <div ref={dropDown} className={`card-post-${isActive}`}>
                     <h1>Login</h1>
                     <hr />
@@ -57,10 +65,10 @@ export default function Login() {
                         <form action="#" onSubmit={handleSubmit(addPost)}>
 
                             <div className="fields">
-                                <label htmlFor="email  ">email</label>
+                                <label htmlFor="email">email</label>
                                 <input
                                     type="text"
-                                    id="email "
+                                    id="email"
                                     name="email"
                                     {...register("email")}
                                 />
@@ -86,7 +94,7 @@ export default function Login() {
                 </div>
 
 
-                <div ref={dropDown} className={`card-post-${!isActive}`}>
+                {/* <div ref={dropDown} className={`card-post-${!isActive}`}>
                     <h1>Deletar conta</h1>
                     <hr />
                     <div className="card-body-post">
@@ -119,11 +127,11 @@ export default function Login() {
                             </div>
                         </form>
                     </div>
-                </div>
+                </div> */}
 
             </main>
             <div className="btn-troca">
-                <button onClick={troca} className={`botao-${isActive}`}>{isActive ? "fazer Login" : "Deletar conta"}</button>
+                <button onClick={()=>navigate("/deletarConta")} className={`botao-${isActive}`}>{isActive ? "fazer Login" : "Deletar conta"}</button>
             </div>
             <Footer />
         </div>

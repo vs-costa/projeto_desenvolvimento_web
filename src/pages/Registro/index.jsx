@@ -34,6 +34,7 @@ export default function Registro() {
       navigate("/");
     })
     .catch(() => {
+      console.log(data);
       console.log("deu errado");
     })
 

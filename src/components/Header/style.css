@@ -24,8 +24,21 @@
     
 }
 
-.menu{
+.menu {
     display: flex;
+    @media (max-width: 768px) {
+        display: none;
+        flex-direction: column;
+        background-color: #3B3C9A;
+        padding: 10px;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        &.menu-open {
+            display: flex;
+        }
+    }
 }
 
 .menu a {
@@ -34,11 +47,28 @@
     color: #FEDD29;
     transition: color 0.3s ease;
     margin-right: 10px;
-    /* font-size: 12px; */
+    margin-bottom: 10px;
+    margin-top: 10px;
+
 }
 
 .menu a:hover {
     color: orange;
 }
 
+.menu-button {
+    display: none;
+    @media (max-width: 768px) {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 10px;
+        background-color: #3B3C9A;
+    }
+}
 
+.menu-button .button-icon {
+    width: 30px;
+    height: 3px;
+    background-color: #FEDD29;
+}

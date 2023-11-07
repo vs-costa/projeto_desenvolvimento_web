@@ -33,7 +33,7 @@ color: white;
   margin-right: 100px;
   text-align: center;
   background-color: #3B3C9A;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 15px;
   
  
 }
@@ -43,7 +43,6 @@ color: white;
   margin-left: 20px;
   margin-right: 20PX;
   text-decoration: none;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   
   
 
@@ -51,7 +50,6 @@ color: white;
 
 .pergunta ul {
 list-style: none;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
 margin-bottom: 40px;
 
 
@@ -61,7 +59,6 @@ margin-bottom: 40px;
   margin-bottom: 30px;
   margin-top: 60px;
   text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   
   }
 
@@ -70,7 +67,6 @@ margin-bottom: 40px;
     text-align: justify;
     margin-top: 10px;
     margin-bottom: 30px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 44px;
     font-size: 17px;
     color: white;
@@ -80,12 +76,31 @@ margin-bottom: 40px;
 
   color: red;
   border: 2px solid black;
-  font-family: 'Courier New', Courier, monospace
 }
 
 
 
+.button {
+  border-radius: 200%;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration : none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;  
+  margin-top: 10px;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-color: blue;
+  border-radius: 50%;
+  transition: background-color 0.30s;  
+  background-color: #3B3C9A;
+  
 
+}
 
 
 
