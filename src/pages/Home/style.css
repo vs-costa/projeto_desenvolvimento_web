@@ -2,7 +2,7 @@
     width: 100%;
     overflow: hidden;
     position: relative;
-  }
+  } */
   
   .carrossel-inner {
     display: flex;
@@ -19,7 +19,7 @@
     width: 100%;
     height: auto;
     object-fit: cover;
-  }
+  } 
   
   .carrossel-item.active {
     transform: translateX(0);
